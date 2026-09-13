@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>All Joy Hub — Compras, Gastronomia e Entretenimento em Montijo</title>
+<meta name="description" content="All Joy Hub em Montijo: compras, restaurante, café, cinema, kids, karting e bilhar num só destino. Descubra experiências para toda a família." />
+<link rel="canonical" href="https://alljoyhub.pt/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="All Joy Hub" />
+<meta property="og:title" content="All Joy Hub — Tudo o que gosta. Num só lugar." />
+<meta property="og:description" content="Compras, gastronomia e entretenimento reunidos num único destino em Montijo. Shop. Eat. Play. Enjoy." />
+<meta property="og:image" content="images/hero-hub.png" />
+<meta property="og:locale" content="pt_PT" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="images/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EntertainmentBusiness",
+  "name": "All Joy Hub",
+  "description": "Compras, gastronomia e entretenimento num único destino em Montijo — shopping, restaurante, café, cinema, kids, karting e bilhar.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Montijo",
+    "addressRegion": "Setúbal",
+    "addressCountry": "PT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.678049,
+    "longitude": -8.937708
+  },
+  "sameAs": ["https://www.instagram.com/gm_mart_loja/"]
+}
+</script>
+<style>
+  :root{
+    --bg:            #fffaf2;
+    --bg-alt:        #fff2df;
+    --surface:       #ffffff;
+    --ink:           #2b241f;
+    --ink-muted:     #6f6153;
+    --ink-faint:     #a89b8b;
+    --line:          rgba(43,36,31,0.10);
+    --line-strong:   rgba(43,36,31,0.18);
+
+    --orange:        #ff7a3d;
+    --orange-dark:   #e2591a;
+    --yellow:        #ffc83c;
+    --coral:         #ff5c7a;
+    --green:         #2fae66;
+    --blue:          #2e93e6;
+
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    --container: 1200px;
+    --pad: clamp(1.25rem, 4vw, 3.5rem);
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+
+    color-scheme: light;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    padding-bottom:64px;
+  }
+  @media (min-width:801px){ body{ padding-bottom:0; } }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    font-weight:700;
+    margin:0;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  p{ margin:0; }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.6em;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent, var(--orange-dark));
+  }
+  .eyebrow::before{
+    content:"";
+    width:1.6em; height:2px;
+    background:var(--accent, var(--orange));
+    border-radius:2px;
+    display:inline-block;
+  }
+
+  .wrap{ max-width:var(--container); margin-inline:auto; padding-inline:var(--pad); }
+  section{ padding:clamp(3.2rem,7vw,5.5rem) var(--pad); position:relative; }
+  .section-alt{ background:var(--bg-alt); }
+
+  .section-head{ max-width:42rem; margin-bottom:clamp(2.2rem,5vw,3.2rem); }
+  .section-head h2{ font-size:clamp(1.9rem,4vw,2.9rem); margin-top:.7rem; }
+  .section-head p{ margin-top:.9rem; color:var(--ink-muted); font-size:1.03rem; max-width:36rem; }
+  .section-head.center{ margin-inline:auto; text-align:center; }
+  .section-head.center .eyebrow{ justify-content:center; width:100%; }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.5em;
+    padding:.9em 1.7em; border-radius:999px;
+    font-family:var(--font-body); font-weight:800; font-size:.85rem; letter-spacing:.01em;
+    cursor:pointer; border:2px solid transparent;
+    transition:transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+    white-space:nowrap;
+  }
+  .btn:focus-visible{ outline:3px solid var(--yellow); outline-offset:2px; }
+  .btn-primary{ background:var(--orange); color:#fff; box-shadow:0 6px 18px rgba(255,122,61,.28); }
+  .btn-primary:hover{ background:var(--orange-dark); transform:translateY(-2px); }
+  .btn-ghost{ background:var(--surface); border-color:var(--line-strong); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--orange); color:var(--orange-dark); }
+  .btn-outline-white{ background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.6); color:#fff; }
+  .btn-outline-white:hover{ background:#fff; color:var(--orange-dark); }
+  .btn-small{ padding:.6em 1.3em; font-size:.76rem; }
+  .btn-block{ width:100%; }
+
+  /* ---------- nav ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:500;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:.9rem var(--pad);
+    background:rgba(255,250,242,0.88);
+    backdrop-filter:blur(10px) saturate(1.1);
+    -webkit-backdrop-filter:blur(10px) saturate(1.1);
+    border-bottom:1px solid var(--line);
+  }
+  .logo{ display:flex; align-items:center; flex-shrink:0; }
+  .logo img{ height:46px; width:auto; display:block; }
+  .logo-footer img{ height:38px; }
+  nav.links{ display:flex; align-items:center; gap:1.8rem; }
+  nav.links a{ font-size:.86rem; font-weight:700; color:var(--ink-muted); transition:color .2s ease; }
+  nav.links a:hover, nav.links a:focus-visible{ color:var(--orange-dark); }
+
+  /* ---------- hero ---------- */
+  .hero{ position:relative; overflow:hidden; background:var(--bg); }
+  .hero-grid{
+    max-width:var(--container); margin-inline:auto;
+    display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:clamp(2rem,5vw,3.5rem);
+    align-items:center;
+    padding:clamp(2.5rem,7vw,4.5rem) var(--pad) clamp(3rem,7vw,5rem);
+  }
+  .hero-copy{ min-width:0; }
+  .hero-copy .eyebrow{ margin-bottom:1rem; }
+  .hero h1{
+    font-size:clamp(2.6rem,5.6vw,4.4rem);
+    line-height:1.03;
+    letter-spacing:-.01em;
+  }
+  .hero h1 .accent{ color:var(--orange); }
+  .hero .tagline{
+    margin-top:1.1rem;
+    font-family:var(--font-display);
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.2rem,2.2vw,1.6rem);
+    color:var(--ink);
+  }
+  .hero .lede{ margin-top:1.1rem; max-width:32rem; font-size:1.05rem; color:var(--ink-muted); }
+  .hero-cta{ margin-top:1.8rem; display:flex; flex-wrap:wrap; gap:.9rem; }
+  .hero-quicklinks{
+    margin-top:2.2rem; display:flex; flex-wrap:wrap; gap:1.4rem;
+  }
+  .hero-quicklinks a{
+    display:inline-flex; align-items:center; gap:.5em;
+    font-size:.85rem; font-weight:700; color:var(--ink-muted);
+  }
+  .hero-quicklinks a:hover{ color:var(--orange-dark); }
+  .hero-quicklinks svg{ width:18px; height:18px; color:var(--orange); flex-shrink:0; }
+
+  .hero-media{
+    position:relative;
+    width:100%;
+    min-width:0;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    aspect-ratio:4/3.1;
+    background:var(--bg-alt);
+    box-shadow:0 20px 50px -20px rgba(43,36,31,.25);
+  }
+  .hero-media img,
+  .hero-media video{ width:100%; height:100%; object-fit:cover; }
+  .hero-media::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(43,36,31,.38), transparent 45%);
+  }
+  .hero-media .play-badge{
+    position:absolute; left:1.2rem; bottom:1.2rem; z-index:2;
+    display:inline-flex; align-items:center; gap:.6em;
+    background:rgba(255,255,255,.92); color:var(--ink);
+    padding:.6em 1em; border-radius:999px; font-size:.82rem; font-weight:800;
+  }
+  .hero-media .play-badge .dot{ width:8px;height:8px;border-radius:50%;background:var(--coral); }
+  .hero-blob{
+    position:absolute; z-index:-1; border-radius:50%; filter:blur(2px);
+  }
+
+  @media (max-width:920px){
+    .hero-grid{ grid-template-columns:minmax(0,1fr); }
+    .hero-media{ order:-1; aspect-ratio:16/11; }
+  }
+
+  /* ---------- experience cards ---------- */
+  .exp-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.1rem;
+  }
+  .exp-card{
+    --accent: var(--orange);
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 1px 2px rgba(43,36,31,.05);
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .exp-card:hover{ transform:translateY(-5px); box-shadow:0 18px 30px -14px rgba(43,36,31,.22); border-color:var(--accent); }
+  .exp-card[data-accent="coral"]{ --accent:var(--coral); }
+  .exp-card[data-accent="orange"]{ --accent:var(--orange); }
+  .exp-card[data-accent="blue"]{ --accent:var(--blue); }
+  .exp-card[data-accent="green"]{ --accent:var(--green); }
+  .exp-card[data-accent="yellow"]{ --accent:var(--yellow-dark, #c98f16); }
+  .exp-media{ position:relative; aspect-ratio:5/4; overflow:hidden; background:var(--bg-alt); }
+  .exp-media img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .exp-card:hover .exp-media img{ transform:scale(1.06); }
+  .exp-icon{
+    position:absolute; top:.9rem; left:.9rem; z-index:2;
+    width:40px; height:40px; border-radius:50%;
+    background:var(--accent); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 10px rgba(43,36,31,.2);
+  }
+  .exp-icon svg{ width:20px; height:20px; }
+  .exp-body{ padding:1.2rem 1.2rem 1.4rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+  .exp-tag{ font-size:.68rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+  .exp-card h3{ font-size:1.15rem; }
+  .exp-card p{ color:var(--ink-muted); font-size:.9rem; flex:1; line-height:1.5; }
+  .exp-cta{ margin-top:.3rem; display:inline-flex; align-items:center; gap:.4em; font-weight:800; font-size:.84rem; color:var(--accent); width:fit-content; transition:gap .2s ease; }
+  .exp-cta:hover{ gap:.65em; }
+
+  @media (max-width:980px){ .exp-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .exp-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- journey flow ---------- */
+  .journey-flow{ position:relative; max-width:30rem; margin-inline:auto; padding-left:3.2rem; }
+  .journey-flow::before{
+    content:""; position:absolute; left:19px; top:6px; bottom:6px; width:2px;
+    background:var(--line-strong);
+  }
+  .journey-step{ position:relative; display:flex; gap:1.1rem; padding:.85rem 0; align-items:flex-start; }
+  .journey-step .num{
+    position:absolute; left:-3.2rem; top:.85rem;
+    width:40px; height:40px; border-radius:50%;
+    background:var(--surface); border:2px solid var(--orange); color:var(--orange-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-display); font-weight:800; font-size:.95rem;
+    z-index:1;
+  }
+  .journey-step .label{ font-weight:800; font-size:1.05rem; letter-spacing:.01em; }
+  .journey-step .caption{ margin-top:.25rem; color:var(--ink-muted); font-size:.92rem; }
+
+  /* ---------- audience ---------- */
+  .audience-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+  .audience-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-md);
+    padding:1.5rem 1.3rem; display:flex; flex-direction:column; gap:.6rem;
+  }
+  .audience-card .num{ font-family:var(--font-display); font-style:italic; color:var(--orange); font-size:1rem; }
+  .audience-card h3{ font-size:1.05rem; }
+  .audience-card p{ color:var(--ink-muted); font-size:.88rem; line-height:1.5; }
+  @media (max-width:920px){ .audience-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .audience-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- cintia / reels ---------- */
+  .reel-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+  .reel-card{
+    position:relative; aspect-ratio:9/13; border-radius:var(--radius-md);
+    overflow:hidden; background:linear-gradient(155deg, var(--coral), var(--orange));
+    display:flex; align-items:flex-end; padding:1.1rem;
+  }
+  .reel-card:nth-child(2){ background:linear-gradient(155deg, var(--blue), #6cc4ff); }
+  .reel-card:nth-child(3){ background:linear-gradient(155deg, var(--green), #7fe0a6); }
+  .reel-card.has-video{ background:#000; }
+  .reel-card.has-video video{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
+  }
+  .reel-card.has-video::after{
+    content:""; position:absolute; inset:0; z-index:1;
+    background:linear-gradient(0deg, rgba(0,0,0,.55), transparent 45%);
+  }
+  .reel-card.has-video .reel-play,
+  .reel-card.has-video .reel-label{ z-index:2; }
+  .reel-play{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,.9);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .reel-play svg{ width:22px; height:22px; color:var(--ink); margin-left:2px; }
+  .reel-card .reel-label{ color:#fff; font-weight:800; font-size:.92rem; }
+  .reel-card .reel-badge{
+    position:absolute; top:.9rem; right:.9rem;
+    background:rgba(255,255,255,.92); color:var(--ink);
+    font-size:.65rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+    padding:.35em .7em; border-radius:999px;
+  }
+  @media (max-width:780px){ .reel-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .reel-grid{ grid-template-columns:1fr; max-width:20rem; margin-inline:auto; } }
+
+  /* ---------- events ---------- */
+  .event-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+  .event-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-md);
+    overflow:hidden; display:flex; flex-direction:column;
+  }
+  .event-media{ aspect-ratio:16/10; position:relative; overflow:hidden; }
+  .event-media img{ width:100%; height:100%; object-fit:cover; }
+  .event-date{
+    position:absolute; top:.9rem; left:.9rem; background:#fff; border-radius:var(--radius-sm);
+    padding:.5em .8em; text-align:center; font-weight:800; line-height:1.1;
+    font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--orange-dark);
+    box-shadow:0 4px 10px rgba(43,36,31,.15);
+  }
+  .event-body{ padding:1.1rem 1.2rem 1.3rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+  .event-card h3{ font-size:1.1rem; }
+  .event-card p{ color:var(--ink-muted); font-size:.88rem; flex:1; }
+  @media (max-width:920px){ .event-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- restaurant / gastronomia ---------- */
+  .gastro-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,3.5rem); align-items:center;
+  }
+  .gastro-media{ border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:4/3.2; }
+  .gastro-media img{ width:100%; height:100%; object-fit:cover; }
+  .gastro-meta{ display:flex; flex-wrap:wrap; gap:1.6rem; margin-top:1.4rem; }
+  .gastro-meta div{ display:flex; flex-direction:column; gap:.2rem; }
+  .gastro-meta .k{ font-size:.68rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--orange-dark); }
+  .gastro-meta .v{ font-size:.92rem; color:var(--ink); }
+  @media (max-width:860px){ .gastro-grid{ grid-template-columns:1fr; } .gastro-media{ order:-1; } }
+
+  /* ---------- birthday teaser ---------- */
+  .birthday-teaser{
+    display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,3rem); align-items:center;
+    background:linear-gradient(155deg, var(--green), #1f9954);
+    border-radius:var(--radius-lg); padding:clamp(2rem,5vw,3rem); color:#fff;
+    overflow:hidden; position:relative;
+  }
+  .birthday-teaser::after{
+    content:""; position:absolute; right:-40px; bottom:-60px; width:220px; height:220px;
+    border-radius:50%; background:rgba(255,255,255,.12);
+  }
+  .birthday-teaser h2{ color:#fff; font-size:clamp(1.7rem,3.6vw,2.4rem); }
+  .birthday-teaser p{ margin-top:.9rem; color:rgba(255,255,255,.9); max-width:32rem; }
+  .birthday-media{ border-radius:var(--radius-md); overflow:hidden; aspect-ratio:16/11; }
+  .birthday-media img{ width:100%; height:100%; object-fit:cover; }
+  @media (max-width:860px){ .birthday-teaser{ grid-template-columns:1fr; } .birthday-media{ order:-1; } }
+
+  /* ---------- kids / play bands ---------- */
+  .band{
+    display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,3.5rem); align-items:center;
+  }
+  .band-media-img{ border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:4/3.2; }
+  .band-media-img img{ width:100%; height:100%; object-fit:cover; }
+  .band-tags{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.3rem; }
+  .tag-pill{
+    padding:.5em 1em; border-radius:999px; font-size:.8rem; font-weight:700;
+    background:var(--bg-alt); color:var(--ink); border:1px solid var(--line);
+  }
+  .tag-pill.accent{ background:var(--accent); color:#fff; border-color:transparent; }
+  .callout{
+    display:flex; align-items:flex-start; gap:.9rem; margin-top:1.5rem;
+    padding:1rem 1.2rem; max-width:30rem; border-radius:var(--radius-sm);
+    background:var(--bg-alt); border:1px solid var(--line);
+  }
+  .callout svg{ color:var(--accent, var(--orange)); flex-shrink:0; margin-top:.1rem; }
+  .callout p{ font-size:.9rem; line-height:1.5; color:var(--ink); }
+  @media (max-width:860px){ .band{ grid-template-columns:1fr; } .band-media-img{ order:-1; } }
+  .band.reverse .band-media-img{ order:2; }
+  @media (max-width:860px){ .band.reverse .band-media-img{ order:-1; } }
+
+  /* ---------- reservation form ---------- */
+  .reserve-inner{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(2rem,5vw,3.5rem); align-items:start; }
+  .form-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:clamp(1.6rem,2.6vw,2.2rem); display:flex; flex-direction:column; gap:1.2rem;
+    box-shadow:0 1px 2px rgba(43,36,31,.05);
+  }
+  .form-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+  .form-grid-2{ grid-template-columns:repeat(2,1fr); }
+  .field{ display:flex; flex-direction:column; gap:.4rem; }
+  .field label{ font-size:.7rem; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--orange-dark); }
+  .field label .optional{ text-transform:none; font-weight:600; letter-spacing:0; color:var(--ink-faint); }
+  .field input, .field select, .field textarea{
+    font-family:var(--font-body); font-size:.95rem; color:var(--ink);
+    background:var(--bg); border:1px solid var(--line-strong); border-radius:10px;
+    padding:.7em .85em; outline:none; transition:border-color .2s ease; resize:vertical;
+  }
+  .field input::placeholder, .field textarea::placeholder{ color:var(--ink-faint); }
+  .field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--orange); }
+  .form-note{ font-size:.82rem; color:var(--ink-faint); max-width:32rem; }
+  .form-note.success{ color:var(--green); font-weight:700; }
+  @media (max-width:860px){ .reserve-inner{ grid-template-columns:1fr; } }
+  @media (max-width:560px){ .form-grid, .form-grid-2{ grid-template-columns:1fr; } }
+
+  /* ---------- visit / location ---------- */
+  .visit-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(2rem,5vw,3.5rem); align-items:start; }
+  .visit-list{ display:flex; flex-direction:column; gap:1.3rem; }
+  .visit-item{ display:flex; gap:1rem; align-items:flex-start; }
+  .visit-item .ic{
+    width:42px; height:42px; border-radius:50%; background:var(--bg-alt); color:var(--orange-dark);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .visit-item .k{ font-weight:800; font-size:.95rem; }
+  .visit-item .v{ margin-top:.15rem; color:var(--ink-muted); font-size:.9rem; }
+  .visit-item .v a{ color:var(--orange-dark); font-weight:700; }
+  .map-card{
+    border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line);
+    display:flex; flex-direction:column; background:var(--surface);
+  }
+  .map-card iframe{ width:100%; height:260px; border:0; display:block; }
+  .map-card .map-foot{ padding:1.1rem 1.2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+  @media (max-width:860px){ .visit-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- social row ---------- */
+  .social-row{ display:flex; gap:.7rem; margin-top:.3rem; }
+  .social-row a{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--line-strong);
+    display:flex; align-items:center; justify-content:center; color:var(--ink-muted);
+    transition:color .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .social-row a:hover{ color:#fff; background:var(--orange); border-color:var(--orange); }
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:2.2rem var(--pad); border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between;
+    color:var(--ink-faint); font-size:.82rem; background:var(--bg-alt);
+  }
+  footer .foot-links{ display:flex; gap:1.5rem; }
+  footer a:hover{ color:var(--orange-dark); }
+
+  /* ---------- mobile quick bar ---------- */
+  .quickbar{
+    display:none;
+  }
+  @media (max-width:800px){
+    .quickbar{
+      display:flex; position:fixed; left:0; right:0; bottom:0; z-index:450;
+      background:var(--surface); border-top:1px solid var(--line);
+      box-shadow:0 -4px 16px rgba(43,36,31,.08);
+      padding:.5rem .6rem calc(.5rem + env(safe-area-inset-bottom));
+      gap:.4rem;
+    }
+    .quickbar a{
+      flex:1; display:flex; flex-direction:column; align-items:center; gap:.2rem;
+      padding:.4rem .2rem; border-radius:12px; font-size:.68rem; font-weight:800; color:var(--ink-muted);
+    }
+    .quickbar a svg{ width:20px; height:20px; color:var(--orange); }
+    .quickbar a.primary{ background:var(--orange); color:#fff; }
+    .quickbar a.primary svg{ color:#fff; }
+  }
+
+  /* ---------- reveal ---------- */
+  .js-reveal{ opacity:1; transform:none; }
+  .js-reveal.reveal-hidden{ opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease; }
+  .js-reveal.reveal-hidden.in-view{ opacity:1; transform:translateY(0); }
+
+  /* ---------- mobile nav ---------- */
+  .nav-toggle{ display:none; }
+  @media (max-width:800px){
+    nav.links{
+      position:fixed; inset:0; background:var(--ink);
+      flex-direction:column; justify-content:center; align-items:center; gap:1.8rem;
+      transform:translateX(100%); transition:transform .35s ease; z-index:900;
+    }
+    nav.links.open{ transform:translateX(0); }
+    nav.links a{ font-size:1.15rem; color:rgba(255,255,255,.9); }
+    nav.links a:hover, nav.links a:focus-visible{ color:var(--yellow); }
+    .nav-toggle{
+      display:flex; flex-direction:column; gap:5px; background:none; border:none;
+      cursor:pointer; padding:.4rem; z-index:1000; position:relative;
+    }
+    .nav-toggle span{ width:22px; height:2px; background:var(--ink); transition:transform .25s ease, opacity .25s ease, background .25s ease; }
+    .nav-toggle.open span{ background:#fff; }
+    .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2){ opacity:0; }
+    .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+    header.nav .btn-small{ display:none; }
+    body.menu-open video{ visibility:hidden; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="#top" class="logo"><img src="images/logo-mark.png" alt="All Joy Hub"></a>
+  <nav class="links" id="navLinks">
+    <a href="#experiencias">Experiências</a>
+    <a href="#kids">Kids</a>
+    <a href="#eventos">Eventos</a>
+    <a href="aniversarios.html">Festas</a>
+    <a href="#visita">Contactos</a>
+  </nav>
+  <div style="display:flex; align-items:center; gap:1rem;">
+    <a href="#reservar" class="btn btn-primary btn-small">Reservar mesa</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy js-reveal">
+        <span class="eyebrow">Um novo destino em Montijo</span>
+        <h1>ALL <span class="accent">JOY</span> HUB</h1>
+        <p class="tagline">Tudo o que gosta. Num só lugar.</p>
+        <p class="lede">Compras, gastronomia e entretenimento reunidos num único destino — pensado para durar o dia inteiro, para famílias, amigos e casais que querem mais do que uma visita rápida.</p>
+        <div class="hero-cta">
+          <a href="#experiencias" class="btn btn-primary">Descobrir o All Joy Hub</a>
+          <a href="#experiencias" class="btn btn-ghost">Explorar experiências</a>
+        </div>
+        <div class="hero-quicklinks">
+          <a href="https://www.google.com/maps?q=38.678049,-8.937708" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            Como chegar
+          </a>
+          <a href="#reservar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            Reservar mesa
+          </a>
+          <a href="#eventos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            Ver eventos
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-media js-reveal">
+        <video autoplay muted loop playsinline poster="images/hero-hub.png" aria-label="Vídeo All Joy Hub">
+          <source src="video/hero.mp4" type="video/mp4">
+        </video>
+        <span class="play-badge"><span class="dot"></span> All Joy Hub</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE NAVIGATION -->
+  <section class="section-alt" id="experiencias">
+    <div class="wrap">
+      <div class="section-head center js-reveal">
+        <span class="eyebrow">O all joy hub</span>
+        <h2>Um lugar. Muitas experiências.</h2>
+        <p style="margin-inline:auto;">All Joy Hub não é apenas uma loja — é um destino onde compras, gastronomia e entretenimento se encontram no mesmo espaço.</p>
+      </div>
+
+      <div class="exp-grid js-reveal">
+        <article class="exp-card" data-accent="coral">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12.5a1.5 1.5 0 0 1-1.5 1.5H8.5A1.5 1.5 0 0 1 7 20.5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+            <img src="images/play-lounge.png" alt="Área de compras e descoberta" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Compras</span>
+            <h3>Descubra algo novo</h3>
+            <p>Moda, casa, acessórios, presentes e muito mais — numa loja pensada para explorar sem pressa.</p>
+            <a href="#experiencias" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-accent="orange" id="gastronomia-card">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8a2 2 0 0 0 2 2v8M7 3v6M10 3v6M16 3c-1.5 0-2.7 1.8-2.7 4.5S14.5 12 16 12v9"/></svg></span>
+            <img src="images/hero-hub.png" alt="Restaurante e praça de alimentação" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Gastronomia</span>
+            <h3>Restaurante &amp; comida</h3>
+            <p>Refeições em grupo, jantares a dois ou uma pausa rápida — sempre com boa comida por perto.</p>
+            <a href="#gastronomia" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-accent="orange">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13a2 2 0 0 1 2 2 4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z"/><path d="M19 11h1.5a1.5 1.5 0 0 1 0 3H19M7 4c0 1-1 1-1 2M11 4c0 1-1 1-1 2"/></svg></span>
+            <img src="images/kids-indoor.png" alt="Café e zona de convívio" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Café</span>
+            <h3>Parar &amp; conviver</h3>
+            <p>Um café para encontrar amigos, descansar entre compras ou fechar a visita em conversa.</p>
+            <a href="#gastronomia" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-accent="blue">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 6l2-3M17 6l-2-3"/></svg></span>
+            <img src="images/hero-hub.png" alt="Cinema" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Cinema</span>
+            <h3>Entretenimento para todos</h3>
+            <p>Sessões para toda a família ou uma noite a dois — o final perfeito para o dia na All Joy Hub.</p>
+            <a href="#play" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-accent="green">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.9L21 9.6l-4.8 4.3 1.3 6.4L12 17l-5.5 3.3 1.3-6.4L3 9.6l6.4-.7L12 3Z"/></svg></span>
+            <img src="images/kids-space.png" alt="Kids Adventure Zone" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Kids</span>
+            <h3>Brincar &amp; explorar</h3>
+            <p>Um espaço criado só para eles, para os pais aproveitarem sem preocupações.</p>
+            <a href="#kids" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-accent="blue">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
+            <img src="images/play-kart.png" alt="Pista de karting" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Karting</span>
+            <h3>Velocidade &amp; competição</h3>
+            <p>Pista indoor com curvas técnicas — para acelerar de verdade em qualquer idade.</p>
+            <a href="#play" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-accent="blue">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="10" rx="1"/><circle cx="8" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>
+            <img src="images/play-lounge.png" alt="Bilhar e arcade" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Bilhar</span>
+            <h3>Encontrar os amigos</h3>
+            <p>Mesas de bilhar e arcade num ambiente descontraído, para aproveitar o momento.</p>
+            <a href="#play" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exp-card" data-accent="yellow">
+          <div class="exp-media">
+            <span class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 14h.01M12 14h.01M16 14h.01"/></svg></span>
+            <img src="images/kids-net.png" alt="Eventos e novidades" loading="lazy">
+          </div>
+          <div class="exp-body">
+            <span class="exp-tag">Eventos</span>
+            <h3>Novidades o ano todo</h3>
+            <p>Promoções, aberturas e datas especiais — há sempre algo novo a acontecer.</p>
+            <a href="#eventos" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORYTELLING JOURNEY -->
+  <section>
+    <div class="wrap">
+      <div class="section-head center js-reveal">
+        <span class="eyebrow">A experience all joy hub</span>
+        <h2>Não é apenas um lugar para comprar.</h2>
+        <p style="margin-inline:auto;">All Joy Hub foi criado para que famílias e amigos passem várias horas juntos no mesmo destino — a comprar, a comer, a jogar e a descobrir algo novo em cada visita.</p>
+      </div>
+
+      <div class="journey-flow js-reveal">
+        <div class="journey-step">
+          <span class="num">1</span>
+          <div><div class="label">Chegar</div><p class="caption">Estacione e entre num destino pensado para ficar o dia todo.</p></div>
+        </div>
+        <div class="journey-step">
+          <span class="num">2</span>
+          <div><div class="label">Descobrir</div><p class="caption">Percorra o espaço e descubra algo novo em cada visita.</p></div>
+        </div>
+        <div class="journey-step">
+          <span class="num">3</span>
+          <div><div class="label">Comprar</div><p class="caption">Moda, casa, presentes e muito mais à sua espera.</p></div>
+        </div>
+        <div class="journey-step">
+          <span class="num">4</span>
+          <div><div class="label">Comer</div><p class="caption">Restaurante e café para uma pausa ou uma refeição em condições.</p></div>
+        </div>
+        <div class="journey-step">
+          <span class="num">5</span>
+          <div><div class="label">Brincar</div><p class="caption">As crianças exploram a Kids Adventure Zone em segurança.</p></div>
+        </div>
+        <div class="journey-step">
+          <span class="num">6</span>
+          <div><div class="label">Divertir-se</div><p class="caption">Kart, bilhar e cinema para continuar a diversão.</p></div>
+        </div>
+        <div class="journey-step">
+          <span class="num">7</span>
+          <div><div class="label">Voltar</div><p class="caption">Há sempre uma razão nova para regressar à All Joy Hub.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head center js-reveal">
+        <span class="eyebrow">Para todos os momentos do dia</span>
+        <h2>Há sempre algo para si.</h2>
+        <p style="margin-inline:auto;">A All Joy Hub não é um destino só para crianças — foi pensada para todos os que procuram um bom momento.</p>
+      </div>
+      <div class="audience-grid js-reveal">
+        <div class="audience-card"><span class="num">01</span><h3>Famílias</h3><p>Compras, alimentação, entretenimento infantil e experiências para viver em conjunto.</p></div>
+        <div class="audience-card"><span class="num">02</span><h3>Jovens &amp; adolescentes</h3><p>Kart, cinema, bilhar, comida e experiências sociais pensadas para grupos.</p></div>
+        <div class="audience-card"><span class="num">03</span><h3>Adultos</h3><p>Compras, restaurante, café e cinema — um lugar para desacelerar ou encontrar-se.</p></div>
+        <div class="audience-card"><span class="num">04</span><h3>Grupos de amigos</h3><p>Entretenimento, gastronomia e um ponto de encontro sempre com algo novo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÍNTIA / SOCIAL CONTENT -->
+  <section>
+    <div class="wrap">
+      <div class="section-head center js-reveal">
+        <span class="eyebrow">Viva o all joy hub</span>
+        <h2>Descubra com a Cíntia</h2>
+        <p style="margin-inline:auto;">A nossa anfitriã mostra experiências, novidades, comida e bastidores da All Joy Hub — em vídeo, direto do Instagram.</p>
+      </div>
+      <div class="reel-grid js-reveal">
+        <div class="reel-card has-video">
+          <video src="video/reel-loja.mp4" muted loop autoplay playsinline aria-label="Conhece a loja"></video>
+          <span class="reel-label">Conhece a loja</span>
+        </div>
+        <div class="reel-card"><span class="reel-badge">Em breve</span><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span><span class="reel-label">Um dia no kart</span></div>
+        <div class="reel-card"><span class="reel-badge">Em breve</span><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span><span class="reel-label">Bastidores da abertura</span></div>
+      </div>
+      <div style="text-align:center; margin-top:2rem;" class="js-reveal">
+        <a href="https://www.instagram.com/gm_mart_loja/" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          Seguir no Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section-alt" id="eventos">
+    <div class="wrap">
+      <div class="section-head js-reveal">
+        <span class="eyebrow">O que está a acontecer</span>
+        <h2>Novidades &amp; Eventos</h2>
+        <p>Promoções, aberturas, datas especiais e atividades — atualizado ao longo do ano.</p>
+      </div>
+      <div class="event-grid js-reveal">
+        <article class="event-card">
+          <div class="event-media"><span class="event-date">Em breve</span><img src="images/hero-hub.png" alt="Abertura da All Joy Hub" loading="lazy"></div>
+          <div class="event-body"><h3>Abertura All Joy Hub</h3><p>O grande dia está a chegar — siga-nos para saber a data e as primeiras novidades.</p></div>
+        </article>
+        <article class="event-card">
+          <div class="event-media"><span class="event-date">A anunciar</span><img src="images/kids-space.png" alt="Tarde Kids" loading="lazy"></div>
+          <div class="event-body"><h3>Tarde Kids Adventure</h3><p>Uma tarde especial na zona kids, com atividades para toda a família.</p></div>
+        </article>
+        <article class="event-card">
+          <div class="event-media"><span class="event-date">A anunciar</span><img src="images/play-kart.png" alt="Noite de kart" loading="lazy"></div>
+          <div class="event-body"><h3>Noite de Kart &amp; Amigos</h3><p>Competição amigável na pista, seguida de convívio no restaurante.</p></div>
+        </article>
+      </div>
+      <div style="margin-top:1.6rem;" class="js-reveal">
+        <a href="https://www.instagram.com/gm_mart_loja/" target="_blank" rel="noopener" class="exp-cta" style="color:var(--orange-dark);">Ver novidades no Instagram <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GASTRONOMIA -->
+  <section id="gastronomia">
+    <div class="wrap">
+      <div class="gastro-grid">
+        <div class="js-reveal">
+          <span class="eyebrow">Gastronomia</span>
+          <h2>Uma pausa — ou ficar mais um pouco.</h2>
+          <p style="margin-top:1rem; color:var(--ink-muted); max-width:32rem;">Restaurante e café pensados para quem quer comer bem, tomar um café ou simplesmente encontrar-se com amigos, sem precisar de motivo para vir.</p>
+          <div class="gastro-meta">
+            <div><span class="k">Horário</span><span class="v">Todos os dias · 10:00–24:00 <em>(a confirmar)</em></span></div>
+            <div><span class="k">Reservas</span><span class="v">Mesa para grupos e famílias</span></div>
+          </div>
+          <a href="#reservar" class="btn btn-primary" style="margin-top:1.6rem;">Reservar mesa</a>
+        </div>
+        <div class="gastro-media js-reveal"><img src="images/hero-hub.png" alt="Restaurante e praça de alimentação All Joy Hub" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIRTHDAYS TEASER -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="birthday-teaser js-reveal">
+        <div>
+          <span class="eyebrow" style="color:#fff;">Festas &amp; aniversários</span>
+          <h2>Também dá para celebrar aqui.</h2>
+          <p>Aniversários infantis, festas em família ou eventos de grupo — tudo com acesso à Kids Adventure Zone, kart, bilhar e restaurante.</p>
+          <a href="aniversarios.html" class="btn btn-outline-white" style="margin-top:1.5rem;">Quero organizar uma festa</a>
+        </div>
+        <div class="birthday-media"><img src="images/kids-indoor.png" alt="Festa de aniversário na All Joy Hub" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KIDS -->
+  <section id="kids">
+    <div class="wrap">
+      <div class="band js-reveal">
+        <div>
+          <span class="eyebrow" style="--accent:var(--green);">Kids Adventure Zone</span>
+          <h2>Um mundo criado para eles.</h2>
+          <p style="margin-top:1rem; color:var(--ink-muted); max-width:32rem;">Uma estrutura moderna de entretenimento infantil, pensada para transformar energia em diversão — brincar, explorar e descobrir, num espaço seguro e feito só para eles.</p>
+          <div class="band-tags">
+            <span class="tag-pill accent" style="--accent:var(--green); background:var(--green);">Segurança em primeiro lugar</span>
+            <span class="tag-pill">Estruturas de nova geração</span>
+            <span class="tag-pill">Para todas as idades</span>
+          </div>
+          <div class="callout" style="--accent:var(--green);">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8Z"/><path d="M4 14l2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2"/><path d="M12 8V4M9 4c0-1 .8-2 1.5-2S12 3 12 4c0-1 .7-2 1.5-2S15 3 15 4"/></svg>
+            <div>
+              <p>Também dá para fazer a sua festa de aniversário aqui — o espaço todo pensado para receber crianças (e os pais) num único lugar.</p>
+              <a href="aniversarios.html" class="exp-cta" style="color:var(--green); margin-top:.5rem;">Ver pacotes e pedir orçamento <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="band-media-img"><img src="images/kids-space.png" alt="Kids Adventure Zone com tema espacial, escorrega e piscina de bolas" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAY / ENTERTAINMENT -->
+  <section class="section-alt" id="play">
+    <div class="wrap">
+      <div class="band reverse js-reveal">
+        <div>
+          <span class="eyebrow" style="--accent:var(--blue);">Karting, bilhar &amp; cinema</span>
+          <h2>Diversão não tem idade.</h2>
+          <p style="margin-top:1rem; color:var(--ink-muted); max-width:32rem;">O grande destaque é a pista de kart indoor — um traçado com curvas técnicas e retas para acelerar de verdade, em karts elétricos preparados para todas as idades. À volta dela, cinema, bilhar e arcade completam a experiência, tudo dentro do mesmo complexo.</p>
+          <div class="band-tags">
+            <span class="tag-pill accent" style="background:var(--blue);">Pista de kart indoor</span>
+            <span class="tag-pill">Cinema</span>
+            <span class="tag-pill">Bilhar</span>
+            <span class="tag-pill">Arcade</span>
+          </div>
+        </div>
+        <div class="band-media-img"><img src="images/play-kart.png" alt="Pista de kart indoor com curvas e karts elétricos" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="wrap">
+      <div class="section-head js-reveal">
+        <span class="eyebrow">O ambiente all joy hub</span>
+        <h2>Mais um pouco do que está para vir.</h2>
+        <p>Referências visuais que guiam o tom do projeto. As fotografias reais do espaço All Joy Hub vão substituir estas imagens antes da abertura.</p>
+      </div>
+      <div class="exp-grid js-reveal" style="grid-template-columns:repeat(3,1fr);">
+        <figure style="margin:0; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:4/3;">
+          <img src="images/play-lounge.png" alt="Zona de arcade, bowling e lounge de convívio" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        </figure>
+        <figure style="margin:0; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:4/3;">
+          <img src="images/kids-net.png" alt="Rede suspensa e área sensorial para crianças" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        </figure>
+        <figure style="margin:0; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:4/3;">
+          <img src="images/kids-indoor.png" alt="Estrutura de escorregas e brinquedos de nova geração" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="section-alt" id="reservar">
+    <div class="wrap reserve-inner">
+      <div class="section-head js-reveal">
+        <span class="eyebrow">Restaurante</span>
+        <h2>Guarde já o seu lugar.</h2>
+        <p>Diga-nos o dia, a hora e quantos vão à mesa — nós tratamos do resto.</p>
+      </div>
+
+      <form class="form-card js-reveal" id="reserveForm" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="rDate">Dia</label><input type="date" id="rDate" name="data" required></div>
+          <div class="field">
+            <label for="rTime">Horário</label>
+            <select id="rTime" name="hora" required>
+              <option value="" disabled selected>Escolher</option>
+              <option>12:30</option><option>13:00</option><option>13:30</option>
+              <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="rGuests">Pessoas</label>
+            <select id="rGuests" name="pessoas" required>
+              <option value="" disabled selected>Escolher</option>
+              <option>1 pessoa</option><option>2 pessoas</option><option>3 pessoas</option>
+              <option>4 pessoas</option><option>5 pessoas</option><option>6 pessoas</option><option>7+ pessoas</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid form-grid-2">
+          <div class="field"><label for="rName">Nome</label><input type="text" id="rName" name="nome" placeholder="O seu nome" required></div>
+          <div class="field"><label for="rContact">Email ou telefone</label><input type="text" id="rContact" name="contacto" placeholder="Para confirmarmos a reserva" required></div>
+        </div>
+        <div class="field">
+          <label for="rNotes">Pedido especial <span class="optional">(opcional)</span></label>
+          <textarea id="rNotes" name="notas" rows="2" placeholder="Alergias, cadeira de bebé, ocasião especial..."></textarea>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:.8rem; align-items:flex-start;">
+          <button type="submit" class="btn btn-primary">Pedir reserva</button>
+          <p class="form-note" id="reserveNote">Ao confirmar, abrimos o seu email já preenchido para enviar o pedido para a All Joy Hub.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- VISIT / LOCATION -->
+  <section id="visita">
+    <div class="wrap">
+      <div class="section-head js-reveal">
+        <span class="eyebrow">Planeie a sua visita</span>
+        <h2>Como chegar à All Joy Hub.</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-list js-reveal">
+          <div class="visit-item">
+            <span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+            <div><div class="k">Horário</div><div class="v">Todos os dias, 10:00–24:00 <em>(a confirmar)</em></div></div>
+          </div>
+          <div class="visit-item">
+            <span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg></span>
+            <div><div class="k">Morada</div><div class="v">União das Freguesias de Atalaia e Alto Estanqueiro-Jardia, Montijo<br><a href="https://www.google.com/maps?q=38.678049,-8.937708" target="_blank" rel="noopener">38.678049, -8.937708 — ver no mapa</a></div></div>
+          </div>
+          <div class="visit-item">
+            <span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="10" rx="2"/><path d="M5 9l1.5-4h11L19 9M7 15h.01M17 15h.01"/></svg></span>
+            <div><div class="k">Estacionamento</div><div class="v">Estacionamento no local <em>(detalhes a confirmar)</em></div></div>
+          </div>
+          <div class="visit-item">
+            <span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.6" fill="currentColor" stroke="none"/><path d="M6 9l6 1.5L18 9M12 10.5V16M9 21l3-5 3 5"/></svg></span>
+            <div><div class="k">Acessibilidade</div><div class="v">Espaço preparado para acessibilidade <em>(detalhes a confirmar)</em></div></div>
+          </div>
+          <div class="visit-item">
+            <span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3V4Z"/></svg></span>
+            <div><div class="k">Contacto</div><div class="v">ola@alljoyhub.com
+              <div class="social-row">
+                <a href="https://www.instagram.com/gm_mart_loja/" target="_blank" rel="noopener" aria-label="Instagram da All Joy Hub">
+                  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+                </a>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="map-card js-reveal">
+          <iframe src="https://maps.google.com/maps?q=38.678049,-8.937708&z=15&output=embed" loading="lazy" title="Mapa da All Joy Hub"></iframe>
+          <div class="map-foot">
+            <span style="font-size:.85rem; color:var(--ink-muted);">Montijo, Setúbal</span>
+            <a href="https://www.google.com/maps?q=38.678049,-8.937708" target="_blank" rel="noopener" class="btn btn-primary btn-small">Como chegar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a href="#top" class="logo logo-footer"><img src="images/logo-mark.png" alt="All Joy Hub"></a>
+  <div class="foot-links">
+    <a href="#">Privacidade</a>
+    <a href="#">Termos</a>
+  </div>
+  <span>&copy; 2026 All Joy Hub. Todos os direitos reservados.</span>
+</footer>
+
+<nav class="quickbar" aria-label="Ações rápidas">
+  <a href="https://www.google.com/maps?q=38.678049,-8.937708" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+    Como chegar
+  </a>
+  <a href="#reservar" class="primary">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+    Reservar
+  </a>
+  <a href="#eventos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+    Eventos
+  </a>
+</nav>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('menu-open', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }));
+
+  const reserveForm = document.getElementById('reserveForm');
+  const reserveNote = document.getElementById('reserveNote');
+  reserveForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!reserveForm.checkValidity()) { reserveForm.reportValidity(); return; }
+    const data = new FormData(reserveForm);
+    const dataStr = data.get('data');
+    const [y, m, d] = dataStr.split('-');
+    const dataFormatada = (y && m && d) ? `${d}/${m}/${y}` : dataStr;
+    const subject = `Reserva de mesa — ${dataFormatada} às ${data.get('hora')}`;
+    const body =
+`Novo pedido de reserva — All Joy Hub
+
+Dia: ${dataFormatada}
+Horário: ${data.get('hora')}
+Pessoas: ${data.get('pessoas')}
+Nome: ${data.get('nome')}
+Contacto: ${data.get('contacto')}
+Pedido especial: ${data.get('notas') || '—'}`;
+    window.location.href = `mailto:ola@alljoyhub.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    reserveNote.textContent = 'A abrir o seu email com o pedido preenchido — é só enviar para confirmarmos a reserva.';
+    reserveNote.classList.add('success');
+  });
+
+  const revealEls = document.querySelectorAll('.js-reveal');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    document.querySelectorAll('video[autoplay]').forEach(v => { v.pause(); v.removeAttribute('loop'); });
+  }
+  if ('IntersectionObserver' in window && !prefersReduced) {
+    revealEls.forEach(el => el.classList.add('reveal-hidden'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(el => io.observe(el));
+  }
+</script>
+</body>
+</html>
