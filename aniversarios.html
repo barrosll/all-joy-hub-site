@@ -67,6 +67,7 @@
     font-size:.72rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--orange-dark);
   }
   .eyebrow::before{ content:""; width:1.6em; height:2px; background:var(--orange); border-radius:2px; display:inline-block; }
+  .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
   .wrap{ max-width:var(--container); margin-inline:auto; padding-inline:var(--pad); }
   section{ padding:clamp(3.2rem,7vw,5.5rem) var(--pad); position:relative; }
@@ -287,7 +288,9 @@
         <p style="margin-top:1rem; color:var(--ink-muted); max-width:30rem;">Diga-nos a data, quantas crianças e qual pacote tem mais a ver com a festa que imagina. Respondemos com os valores e disponibilidade.</p>
       </div>
 
-      <form class="quote-card js-reveal" id="quoteForm" novalidate>
+      <form class="quote-card js-reveal" id="quoteForm" name="orcamento-aniversario" method="POST" data-netlify="true" netlify-honeypot="empresa" novalidate>
+        <input type="hidden" name="form-name" value="orcamento-aniversario">
+        <p class="sr-only"><label>Não preencher: <input name="empresa"></label></p>
         <div class="quote-grid">
           <div class="field"><label for="qDate">Data pretendida</label><input type="date" id="qDate" name="data" required></div>
           <div class="field"><label for="qKids">Nº de crianças</label><input type="number" id="qKids" name="criancas" min="1" max="60" placeholder="Ex: 12" required></div>
@@ -349,6 +352,10 @@
 
   const quoteForm = document.getElementById('quoteForm');
   const quoteNote = document.getElementById('quoteNote');
+  function encodeFormData(data) {
+    return Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+  }
+
   quoteForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!quoteForm.checkValidity()) { quoteForm.reportValidity(); return; }
@@ -356,8 +363,26 @@
     const dataStr = data.get('data');
     const [y, m, d] = dataStr.split('-');
     const dataFormatada = (y && m && d) ? `${d}/${m}/${y}` : dataStr;
-    const subject = `Orçamento festa de aniversário — ${dataFormatada}`;
-    const body =
+    const payload = {
+      'form-name': 'orcamento-aniversario',
+      data: dataFormatada,
+      criancas: data.get('criancas'),
+      pacote: data.get('pacote'),
+      nome: data.get('nome'),
+      contacto: data.get('contacto'),
+      notas: data.get('notas') || '—'
+    };
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeFormData(payload)
+    }).then(() => {
+      quoteNote.textContent = 'Pedido enviado! Vamos preparar o orçamento e entrar em contacto consigo.';
+      quoteNote.classList.add('success');
+      quoteForm.reset();
+    }).catch(() => {
+      const subject = `Orçamento festa de aniversário — ${dataFormatada}`;
+      const body =
 `Novo pedido de orçamento — Aniversário All Joy Hub
 
 Data pretendida: ${dataFormatada}
@@ -366,9 +391,10 @@ Pacote preferido: ${data.get('pacote')}
 Nome: ${data.get('nome')}
 Contacto: ${data.get('contacto')}
 Pedido especial: ${data.get('notas') || '—'}`;
-    window.location.href = `mailto:ola@alljoyhub.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    quoteNote.textContent = 'A abrir o seu email com o pedido preenchido — é só enviar para recebermos o pedido de orçamento.';
-    quoteNote.classList.add('success');
+      window.location.href = `mailto:ola@alljoyhub.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      quoteNote.textContent = 'Não foi possível enviar automaticamente — a abrir o seu email como alternativa.';
+      quoteNote.classList.add('success');
+    });
   });
 
   const revealEls = document.querySelectorAll('.js-reveal');

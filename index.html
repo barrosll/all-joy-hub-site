@@ -927,7 +927,9 @@
         <p>Diga-nos o dia, a hora e quantos vão à mesa — nós tratamos do resto.</p>
       </div>
 
-      <form class="form-card js-reveal" id="reserveForm" novalidate>
+      <form class="form-card js-reveal" id="reserveForm" name="reserva-mesa" method="POST" data-netlify="true" netlify-honeypot="empresa" novalidate>
+        <input type="hidden" name="form-name" value="reserva-mesa">
+        <p class="sr-only"><label>Não preencher: <input name="empresa"></label></p>
         <div class="form-grid">
           <div class="field"><label for="rDate">Dia</label><input type="date" id="rDate" name="data" required></div>
           <div class="field">
@@ -1055,6 +1057,10 @@
 
   const reserveForm = document.getElementById('reserveForm');
   const reserveNote = document.getElementById('reserveNote');
+  function encodeFormData(data) {
+    return Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+  }
+
   reserveForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!reserveForm.checkValidity()) { reserveForm.reportValidity(); return; }
@@ -1062,8 +1068,26 @@
     const dataStr = data.get('data');
     const [y, m, d] = dataStr.split('-');
     const dataFormatada = (y && m && d) ? `${d}/${m}/${y}` : dataStr;
-    const subject = `Reserva de mesa — ${dataFormatada} às ${data.get('hora')}`;
-    const body =
+    const payload = {
+      'form-name': 'reserva-mesa',
+      dia: dataFormatada,
+      horario: data.get('hora'),
+      pessoas: data.get('pessoas'),
+      nome: data.get('nome'),
+      contacto: data.get('contacto'),
+      notas: data.get('notas') || '—'
+    };
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeFormData(payload)
+    }).then(() => {
+      reserveNote.textContent = 'Reserva enviada! Vamos confirmar disponibilidade e entrar em contacto consigo.';
+      reserveNote.classList.add('success');
+      reserveForm.reset();
+    }).catch(() => {
+      const subject = `Reserva de mesa — ${dataFormatada} às ${data.get('hora')}`;
+      const body =
 `Novo pedido de reserva — All Joy Hub
 
 Dia: ${dataFormatada}
@@ -1072,9 +1096,10 @@ Pessoas: ${data.get('pessoas')}
 Nome: ${data.get('nome')}
 Contacto: ${data.get('contacto')}
 Pedido especial: ${data.get('notas') || '—'}`;
-    window.location.href = `mailto:ola@alljoyhub.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    reserveNote.textContent = 'A abrir o seu email com o pedido preenchido — é só enviar para confirmarmos a reserva.';
-    reserveNote.classList.add('success');
+      window.location.href = `mailto:ola@alljoyhub.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      reserveNote.textContent = 'Não foi possível enviar automaticamente — a abrir o seu email como alternativa.';
+      reserveNote.classList.add('success');
+    });
   });
 
   const revealEls = document.querySelectorAll('.js-reveal');
