@@ -399,7 +399,8 @@
     display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,3.5rem); align-items:center;
   }
   .band-media-img{ border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:4/3.2; }
-  .band-media-img img{ width:100%; height:100%; object-fit:cover; }
+  .band-media-img img,
+  .band-media-img video{ width:100%; height:100%; object-fit:cover; display:block; }
   .band-tags{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.3rem; }
   .tag-pill{
     padding:.5em 1em; border-radius:999px; font-size:.8rem; font-weight:700;
@@ -554,7 +555,7 @@
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-copy js-reveal">
-        <span class="eyebrow">Um novo destino em Montijo</span>
+        <span class="eyebrow">Um novo destino no Montijo</span>
         <h1>ALL <span class="accent">JOY</span> HUB</h1>
         <p class="tagline">Tudo o que gosta. Num só lugar.</p>
         <p class="lede">Compras, gastronomia e entretenimento reunidos num único destino — pensado para durar o dia inteiro, para famílias, amigos e casais que querem mais do que uma visita rápida.</p>
@@ -642,10 +643,10 @@
             <img src="images/hero-hub.png" alt="Cinema" loading="lazy">
           </div>
           <div class="exp-body">
-            <span class="exp-tag">Cinema</span>
+            <span class="exp-tag">Cinema 9D</span>
             <h3>Entretenimento para todos</h3>
             <p>Sessões para toda a família ou uma noite a dois — o final perfeito para o dia na All Joy Hub.</p>
-            <a href="#play" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
+            <a href="#cinema9d" class="exp-cta">Explorar <span aria-hidden="true">&rarr;</span></a>
           </div>
         </article>
 
@@ -831,6 +832,29 @@
           <a href="#reservar" class="btn btn-primary" style="margin-top:1.6rem;">Reservar mesa</a>
         </div>
         <div class="gastro-media js-reveal"><img src="images/restaurant.png" alt="Restaurante temático All Joy Hub" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CINEMA 9D -->
+  <section class="section-alt" id="cinema9d">
+    <div class="wrap">
+      <div class="band reverse js-reveal">
+        <div>
+          <span class="eyebrow" style="--accent:var(--blue);">Cinema 9D</span>
+          <h2>Muito mais do que uma sessão.</h2>
+          <p style="margin-top:1rem; color:var(--ink-muted); max-width:32rem;">Movimento real, imagem imersiva e efeitos especiais — o Cinema 9D coloca o corpo todo dentro da história, para toda a família ou uma noite a dois.</p>
+          <div class="band-tags">
+            <span class="tag-pill accent" style="background:var(--blue);">Movimento real</span>
+            <span class="tag-pill">Imagem imersiva</span>
+            <span class="tag-pill">Efeitos especiais</span>
+          </div>
+        </div>
+        <div class="band-media-img">
+          <video autoplay muted loop playsinline poster="images/cinema9d-poster.png" aria-label="Cinema 9D All Joy Hub">
+            <source src="video/cinema9d.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </section>
