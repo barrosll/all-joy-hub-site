@@ -320,7 +320,8 @@
   }
   .reel-card:nth-child(2){ background:linear-gradient(155deg, var(--blue), #6cc4ff); }
   .reel-card:nth-child(3){ background:linear-gradient(155deg, var(--green), #7fe0a6); }
-  .reel-card.has-video{ background:#000; aspect-ratio:16/9; align-self:start; }
+  .reel-card.has-video{ background:#000; }
+  .reel-card.has-video.landscape{ aspect-ratio:16/9; align-self:start; }
   .reel-card.has-video video{
     position:absolute; inset:0; width:100%; height:100%; object-fit:contain; z-index:0;
   }
@@ -748,11 +749,14 @@
         <p style="margin-inline:auto;">A nossa anfitriã mostra experiências, novidades, comida e bastidores da All Joy Hub — em vídeo, direto do Instagram.</p>
       </div>
       <div class="reel-grid js-reveal">
-        <div class="reel-card has-video">
+        <div class="reel-card has-video landscape">
           <video src="video/reel-loja.mp4" muted loop autoplay playsinline aria-label="Conhece a loja"></video>
           <span class="reel-label">Conhece a loja</span>
         </div>
-        <div class="reel-card"><span class="reel-badge">Em breve</span><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span><span class="reel-label">Um dia no kart</span></div>
+        <div class="reel-card has-video">
+          <video src="video/reel-kart.mp4" muted loop autoplay playsinline aria-label="Um dia no kart"></video>
+          <span class="reel-label">Um dia no kart</span>
+        </div>
         <div class="reel-card"><span class="reel-badge">Em breve</span><span class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg></span><span class="reel-label">Bastidores da abertura</span></div>
       </div>
       <div style="text-align:center; margin-top:2rem;" class="js-reveal">
